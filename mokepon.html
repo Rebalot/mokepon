@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title class="">MOKEPON!</title>
+        <script src="./js/mokepon.js"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <div class="ContenidoGeneral">
+            <nav id="BarraSuperior">
+                <div id="SilenciarMusica">
+                    <label for="muteCheckbox">Silenciar música:</label>
+                    <input type="checkbox" id= "muteCheckbox">
+                </div>
+                <section id="Reiniciar">
+                    <button>Reiniciar</button>
+                </section>
+                <button id="HOME">PERFIL</button>    
+            </nav>
+            <div class="Contenido Cont1" id="Cont1" style="display: grid;">
+                <header>
+                    <h1 class="titulo">MOKEPON!</h1>
+                </header>
+                <aside class="Columna1 Cont1">
+                    <section id="Msj_Sistema_Cont1">
+                        <div class="Contenedor_MsjSistema">
+                            <h2>Mensajes Sistema</H2>
+                            <div id="MsjSistema_Cont1">
+                                <div id="SeleccJG"></div>
+                                <div id="SeleccPC"></div>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+                <main class="Central Cont1">
+                    <section id="Eleccion">
+                        <h2 class="Cont1">Elige tu mokepon:</h2>
+                        <div class="Mokepon-1">
+                            <img src="./images/Milopras_Agua.png" alt="Imagen de Milopras" id="ImgMilo">
+                        </div>
+                        <div class="Descrip-1">
+                            <img src="./images/pokeballclosed.png" alt="input" id="PokeC1">
+                            <img src="./images/pokeball.png" style="display: none;" alt="input" id="PokeO1">
+                            <input type="radio" id="Milopras" name="Mokepon" value="Milopras" class="inputs1">
+                            <label for="Milopras">
+                                Milopras
+                            </label>
+                        </div>
+                        <div class="Mokepon-2">
+                            <img src="./images/Talondigon_Fuego.png" alt="Imagen de Talondigon" id="ImgTalo">
+                        </div>
+                        <div class="Descrip-2">
+                            <img src="./images/pokeballclosed.png" alt="input" id="PokeC2">
+                            <img src="./images/pokeball.png" style="display: none;" alt="input" id="PokeO2">
+                            <input type="radio" id="Talondigon" name="Mokepon" value="Talondigon" class="inputs1">
+                            <label for="Talondigon">
+                                Talondigon
+                            </label>
+                        </div>
+                        <div class="Mokepon-3">
+                            <img src="./images/Gartile_Planta.png" alt="Imagen de Gartile" id="ImgGart">
+                        </div>
+                        <div class="Descrip-3">
+                            <img src="./images/pokeballclosed.png" alt="input" id="PokeC3">
+                            <img src="./images/pokeball.png" style="display: none;" alt="input" id="PokeO3">
+                            <input type="radio" id="Gartile" name="Mokepon" value="Gartile" class="inputs1">
+                            <label for="Gartile">
+                                Gartile
+                            </label>
+                        </div>  
+                    </section>
+                    <section id="SeleccionarAlerta">
+                        <button id="Boton-Seleccionar">Seleccionar</button>
+                        
+                        <div id="miAlerta"></div>
+                    </section>
+                </main>
+                <aside class="Columna2 Cont1">
+                    <div id="Introduccion">
+                        <div class="Content">
+                            <p class="titulo">
+                            BIENVENIDO A MOKEPON!
+                            </p>
+                            <p class="main">
+                            Para continuar, selecciona uno de los MOKEPONES y preparate para el COMBATE.
+                            </p>
+                        </div>
+                    </div>  
+                </aside>
+            </div>
+            <div class="Contenido Cont2" id="Cont2" style="display: none;">
+                <header>
+                    <h1 class="titulo Cont2">MOKEPON!</h1>
+                </header>
+                <aside class="Columna1 Cont2">
+                    <section id="Msj_Sistema_Cont2">
+                        <div class="Contenedor_MsjSistema">
+                            <h2>Mensajes Sistema</H2>
+                            <div id="MsjSistema_Cont2">
+                                
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+                <main class="Central Cont2">
+                    <section id="Mokepones-Seleccionados">
+                        <div class="Seleccionado JG">
+                            <div class="Nombre JG">
+                                JUGADOR
+                            </div>
+                            <div class="BasePoke JG">
+                                <img src="./images/Milopras_Agua.png" alt="Imagen de Milopras" style="display: none;" id="MiloprasS">
+                                <img src="./images/Gartile_Planta.png" alt="Imagen de Gartile" style="display: none;" id="GartileS">
+                                <img src="./images/Talondigon_Fuego.png" alt="Imagen de Talondigon" style="display: none;" id="TalondigonS">
+                            </div>
+                            <div class="Moke-HP JG">
+                                <span id="Mokepon-Jugador"></span>
+                                <br>
+                                <span id="HP-Jugador"></span> HP</p> 
+                            </div>
+                        </div>
+                        
+                        <div class="VS">
+                            VS
+                        </div>
+                        
+                        <div class="Seleccionado PC">
+                            <div class="Nombre PC">
+                                ENEMIGO
+                            </div>
+                            <div class="BasePoke PC">
+                                <img src="./images/Milopras_Agua.png" alt="Imagen de Milopras" style="display: none;" id="MiloprasSE">
+                                <img src="./images/Gartile_Planta.png" alt="Imagen de Gartile" style="display: none;" id="GartileSE">
+                                <img src="./images/Talondigon_Fuego.png" alt="Imagen de Talondigon" style="display: none;" id="TalondigonSE">
+                            </div>
+                            <div class="Moke-HP PC">
+                                <span id="Mokepon-Enemigo"></span>
+                                <br>
+                                <span id="HP-Enemigo"></span> HP</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="Ataques">
+                        <h2 class="Cont2">Selecciona un ataque</h2>
+                        <div class="BotonesAtaque">
+                            <button id="Boton-Fuego" class="BOTONATAQUE fuego">Fuego 🔥</button>
+                            <button id="Boton-Agua" class="BOTONATAQUE agua">Agua 💧</button>
+                            <button id="Boton-Planta" class="BOTONATAQUE planta">Planta 🌱</button>
+                        </div>
+                    </section>
+                </main>
+                <aside class="Columna2 Cont2">
+                    <section id="Historial">
+                        <div class="HistorialTitulo">
+                        <h2 class="Cont2">Historial</h2>
+                        </div>
+                        <div class="HistorialTexto">
+                        <div id="MensajesContainer"></div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+            <section id="Musica" style="display: none;">
+                <audio id="MusicaInicio" controls hidden>
+                    <source src="./music/57 - Cynthia.mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <audio id="MusicaBatalla" controls hidden>
+                    <source src="./music/58 - Battle! (Cynthia).mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <audio id="MusicaLowHP" controls hidden>
+                    <source src="./music/Pokemon Black And White OST - Low HP Music (Extended).mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <audio id="MusicaDefeat" controls hidden>
+                    <source src="./music/345 Mission Failed....mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <audio id="MusicaVictory" controls hidden>
+                    <source src="./music/127 Victory Against Trainer!.mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </section>
+        </div>
+    </body>
+</html>
